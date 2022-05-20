@@ -12,6 +12,7 @@ function loadFile(filePath) {
 }
 const allDaSubmissions = loadFile("submissions.json");
 const submissions = JSON.parse(allDaSubmissions);
+// ignore me
 var submissionsAdded = submissions.length;
 while (submissionsAdded != 0) {
     let submission = submissions[submissionsAdded - 1];
