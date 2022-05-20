@@ -11,7 +11,7 @@ function loadFile(filePath) {
     return result;
 }
 const allDaSubmissions = loadFile("submissions.json");
-const submissions = ["xmr:48Wj8WYCiwPBTWGZr3srJCZ4Ly7u2YcP43PCA8WbvdW5ihmdPQL1hUwQxyho61wz5F9DQhYTvGYjx7VamtD6zz3xVKbGJbu", "btc:34kPYpHZ6yAepQernLWbxRMMpkZxiCXiCN", "etc:0xf7bF8a5fcc6B30D831065fC460062483614E4871", "eth:0xf7bF8a5fcc6B30D831065fC460062483614E4877"];
+const submissions = JSON.parse(allDaSubmissions);
 var submissionsAdded = submissions.length;
 while (submissionsAdded != 0) {
     let submission = submissions[submissionsAdded - 1];
