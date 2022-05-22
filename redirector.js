@@ -4,13 +4,8 @@ function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function Work() {
-    var browser = navigator.userAgent;
     var article = Math.floor(Math.random() * 11) // generate a random number between 0 and 11 to choose an article
     var ddgprivacyChance = Math.floor(Math.random() * 10)
-    if (browser.includes("Chrome/")) {
-        alert("Warning: Chrome Detected! Please, for your own privacy, get a new browser!");
-        window.location.href = "https://www.financialexpress.com/industry/technology/duckduckgo-is-asking-users-to-ditch-google-chrome-heres-why/2230683/";
-    } else {
         if (article == 0) { // article refuses to be 11, so give it a 50% chance to be chosen when article is 0
             if (ddgprivacyChance > 5) {
                 article = 11;
@@ -58,6 +53,5 @@ async function Work() {
         } else {
             window.location.reload();
         }
-    }
 }
 Work()
