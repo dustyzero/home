@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DustyZero - FAQ</title>
+    <link rel="icon" type="image/png" href="Photos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+    
+         /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+    
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }  /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+    
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        } 
+    
+        .collapsible {
+        background-color: rgb(119, 119, 119);
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+        background-color: #555;
+        }
+
+        .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        }
+
+        .main {
+        padding: 16px;
+        margin-bottom: 30px;
+        }
+        </style>
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+<div class="row">
+    <div class="column">
+        <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p>
+    </div>
+    <div class="column">
+        <p style="text-align:center;"><img src="Photos/dustyzerotxt.png" style="width:100%"></p>
+    </div>
+    </div> 
+    </div>
+</div> 
+<p style="text-align:center; font-size:160%;"><strong>FAQ</strong></p>
+<button type="button" class="collapsible">How do I download Python?</button>
+<div class="content">
+  <p>Go to <a href="https://python.org/">python.org</a> and download your preferred version. <strong>NOTE: SOME FEATURES MAY NOT WORK WITH OLDER VERSIONS OF PYTHON!</strong></p>
+</div>
+<button type="button" class="collapsible">How do I unzip the folder?</button>
+<div class="content">
+  <p>Download an application that will unzip folders for you. (You can find my recommended application by searching '7zip' on the internet). Once you have downloaded <a href="https://7-zip.org/">7zip</a> you can right click the folder and extract to 'Press enter to begin/' or 'Coded Clash/', etc. All of these instructions can be found on the game's <a href="https://dustyzero.itch.io/">itch.io</a> page.</p>
+</div>
+<button type="button" class="collapsible">When will your new game release?</button>
+<div class="content">
+  <p>Games take time, so not every game has a solid release date.</p>
+</div>
+<button type="button" class="collapsible">For your text based games, when I've downloaded the game, can I delete Python?</button>
+<div class="content">
+  <p>No, because the game won't work without Python.</p>
+</div>
+<button type="button" class="collapsible">Do your games contain a virus?</button>
+<div class="content">
+  <p>No, our games are virus free! We do not intend to hurt anyones' pc</p>
+</div>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+</body>
+</html>

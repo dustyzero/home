@@ -1,0 +1,65 @@
+.h
+{
+color:blue;
+}
+.navigation {
+max-width: 500px;
+border-radius: 8px;
+background-color: brown;
+padding-right: 30px;
+line-height: 3;
+display: flex;
+}
+.navigationBar {
+position: relative;
+width: 100%;
+height: 100%;
+}
+.navigationBar::before, .navigationBar::after {
+width: 100%;
+height: 50%;
+background-color: #EAFBFF;
+}
+*, *::before, *::after {
+box-sizing: border-box;
+}
+.navigationBar.active ul {
+width: 420px;
+margin-right: 20px;
+}
+.navigationToggle {
+width: 40px;
+height: 48px;
+padding: 14px 5px;
+cursor: pointer;
+}
+.navigationBar ul {
+justify-content: space-between;
+list-style: none;
+width: 0;
+overflow: hidden;
+}
+.navigationBar:not (.active ) .navigationToggle {
+margin-left: -11px
+}
+.navigationToggle::after {
+margin-top: 10px;
+}
+.navigationBar.active .navigationToggle::before, .navigationBar.active .navigationToggle::after
+{
+position: absolute;
+top: 52%;
+transform: rotate(135deg);
+}
+.navigationToggle::before, .navigationToggle::after {
+content: '';
+position: relative;
+display: block;
+width: 30px;
+height: 3px;
+background-color: yellow;
+}
+.navigationBar.active .navigationToggle::after {
+transform: rotate(-135deg);
+margin-top: 0;
+}
