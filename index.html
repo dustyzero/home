@@ -4,6 +4,7 @@
     <title>DustyZero - Home</title>
     <link rel="icon" type="image/png" href="Photos/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/simple.css">
     <style>
     body {
     margin: 0;
@@ -43,10 +44,30 @@
     </style>
 </head>
 <body style="background-color:rgb(255, 255, 255);">
+    <nav id="menu" class="panel" role="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            </br>
+            <a>Version: 2.0</a>
+        </ul>
+    </nav>
+    
 <script>// <p><img src="Photos/hamburger.png" width="50" height="50"></p></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<script src="bigSlide.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.menu-link').bigSlide();
+    });
+</script>
 <div class="row">
     <div class="column">
-        <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p>
+        <div class="wrap push">
+            <a href="#menu" class="menu-link"><img src="Photos/hamburger.png" style="width:10%"></a>
+        </div>
+        <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
     </div>
     <div class="column">
         <p style="text-align:center;"><img src="Photos/dustyzerotxt.png" style="width:100%"></p>
