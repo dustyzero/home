@@ -4,38 +4,45 @@
     <title>DustyZero - About</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/simple.css">
+	<meta property="og:site_name" content="DustyZero">
+	<meta property="og:url" content="https://dustyzero.xyz">
+	<meta property="og:title" content="About">
+	<meta property="og:description" content="An indie game studio"> 
+	<meta property="og:type" content="website">
+	<meta name="og:image" itemprop="image" content="images/dusty0.png">
     <style>
     body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     }
 
-     /* Three image containers (use 25% for four, and 50% for two, etc) */
-    .column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
+    .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
     }
 
-    /* Clear floats after image containers */
-    .row::after {
-    content: "";
-    clear: both;
-    display: table;
-    }  /* Three image containers (use 25% for four, and 50% for two, etc) */
-    .column {
+    .navbar a {
     float: left;
-    width: 33.33%;
-    padding: 5px;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
     }
 
-    /* Clear floats after image containers */
-    .row::after {
-    content: "";
-    clear: both;
-    display: table;
-    } 
+    .navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+    }
+
+    .navbar a.active {
+    background-color: #8e00fb;
+    color: white;
+    }
 
     .main {
     padding: 16px;
@@ -43,37 +50,9 @@
     }
     </style>
 </head>
-<body style="background-color:rgb(255, 255, 255);">
-    <nav id="menu" class="panel" role="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="about.html">About</a></li>
-            </br>
-            <a>Version: 2.0</a>
-        </ul>
-    </nav>
-    
-    <script>// <p><img src="Photos/hamburger.png" width="50" height="50"></p></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="bigSlide.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.menu-link').bigSlide();
-        });
-    </script>
-    </script>
-    <div class="row">
-        <div class="column">
-            <div class="wrap push">
-                <a href="#menu" class="menu-link"><img src="Photos/hamburger.png" style="width:10%"></a>
-            </div>
-            <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
-        </div>
-        <div class="column">
-            <p style="text-align:center;"><img src="Photos/dustyzerotxt.png" style="width:100%"></p>
-        </div>
-    </div> 
+<body style="background-color:rgba(109, 9, 212, 0.320);">
+
+<h2>About</h2>
 <p style="text-align:center; font-size:150%;"><strong>DustyZero is a small indie game studio created by ThatDevIzzie.</strong></p>
 </br>
 </br>
@@ -85,6 +64,7 @@
 </br>
 <p style="text-align:center;"><strong>• Butter/HoldMyLimez - Co-founder of DustyZero - Game developer/Website developer</strong></p>
 <script>// This was the only way i could think of to make comments in html, either way remember to put image here!</script>
+</br>
 </br>
 </br>
 <header><p style="text-align:center; font-size:120%;"><strong>Our Titles</strong></p></header>
@@ -119,4 +99,10 @@
     • Eggu - Programmer & Artist</br>
     • MonkeyHat549 - Musician</strong></p>
 </br>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="socials.html">Socials</a>
+</div>
 </body>
