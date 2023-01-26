@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DustyZero - Page Not Found</title>
+    <link rel="icon" type="image/png" href="../../../../Photos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="DustyZero">
+    <meta property="og:url" content="https://dustyzero.xyz/404.html">
+    <meta property="og:title" content="Page Not Found">
+    <meta property="og:description" content="An indie game studio">
+    <meta property="og:type" content="website">
+    <meta name="og:image" itemprop="image" content="../../../../legacy/images/dusty0.png">
+    <link rel="stylesheet" href="../../../../css/simple.css">
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }  /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        } 
+
+        .main {
+        padding: 16px;
+        margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $.urlParam = function (name) {
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                            .exec(window.location.search);
+
+            return (results !== null) ? results[1] || 0 : false;
+        }
+        var fileName = location.pathname.split("/").slice(-1);
+        console.log("Logged for Redirecting; Dark mode " + $.urlParam('darkmode') + "!"); 
+        if ($.urlParam('darkmode') == "on") {
+            window.location.href = "../../../404.html?darkmode=on";
+        } else {
+            window.location.href = "../../../404.html?darkmode=off";
+        }
+</script>
+</body>
+</html>
