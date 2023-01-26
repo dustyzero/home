@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DustyZero - News</title>
+    <link rel="icon" type="image/png" href="../../../Photos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="DustyZero">
+    <meta property="og:url" content="https://dustyzero.xyz/news/topics/website/">
+    <meta property="og:title" content="Website 2.0 has been launched!! - Butter">
+    <meta property="og:description" content="An indie game studio">
+    <meta property="og:type" content="website">
+    <meta name="og:image" itemprop="image" content="../../../legacy/images/dusty0.png">
+    <link rel="stylesheet" href="../../../css/simple.css">
+    <style>
+    body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+     /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    }
+
+    /* Clear floats after image containers */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }  /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    }
+
+    .bruhh {
+    float: center;
+    width: 33.33%;
+    padding: 5px;
+    }
+
+    /* Clear floats after image containers */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    } 
+
+    .main {
+    padding: 16px;
+    margin-bottom: 30px;
+    }
+    </style>
+</head>
+<body style="background-color:rgb(255, 255, 255);">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="../../../colorshit.js"></script>
+    <nav id="menu" class="panel" role="navigation">
+        <ul>
+            <script src="../menu-articles.js"></script>
+        </ul>
+    </nav>
+    
+    <script>// <p><img src="Photos/hamburger.png" width="50" height="50"></p></script>
+    
+    <script src="../../../bigSlide.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.menu-link').bigSlide();
+        });
+    </script>
+    </script>
+    <div class="row">
+        <div class="column">
+            <div class="wrap push">
+                <script src="../menucolorshit-articles.js"></script>
+            </div>
+            <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
+        </div>
+        <div class="column">
+            <script src="../logoshit-articles.js"></script>
+        </div>
+    </div> 
+    <script>
+        console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
+        if ($.urlParam('darkmode') == "on") {
+            document.write('<p style="text-align:center; font-size:150%; color:white;"><strong>Article Navigator</strong></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Here are all the articles up until now, newest first:</strong></p>');
+            document.write('<p style="text-align:center;"><a href="website2.1release/article.html?darkmode=on"><img src="../../../Photos/website2.1launchnews.png" style="width:30%;"></a></p>');
+            document.write('<p style="text-align:center;"><a href="website2.0release/article.html?darkmode=on"><img src="../../../Photos/website2.0launchnews.png" style="width:30%;"></a></p>');
+        } else {
+            document.write('<p style="text-align:center; font-size:150%;"><strong>Article Navigator</strong></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center; font-size:120%;"><strong>Here are all the articles up until now, newest first:</strong></p>');
+            document.write('<p style="text-align:center;"><a href="website2.1release/article.html"><img src="../../../Photos/website2.1launchnews.png" style="width:30%;"></a></p>');
+            document.write('<p style="text-align:center;"><a href="website2.0release/article.html"><img src="../../../Photos/website2.0launchnews.png" style="width:30%;"></a></p>');
+        }
+</script>
+</br>
+</br>
+</body>

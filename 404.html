@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DustyZero - Page Not Found</title>
+    <link rel="icon" type="image/png" href="/Photos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="DustyZero">
+    <meta property="og:url" content="https://dustyzero.xyz/404.html">
+    <meta property="og:title" content="Page Not Found">
+    <meta property="og:description" content="An indie game studio">
+    <meta property="og:type" content="website">
+    <meta name="og:image" itemprop="image" content="legacy/images/dusty0.png">
+    <link rel="stylesheet" href="css/simple.css">
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }  /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        } 
+
+        .main {
+        padding: 16px;
+        margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="colorshit.js"></script>
+    <nav id="menu" class="panel" role="navigation">
+        <ul>
+            <script src="menu-root.js"></script>
+        </ul>
+    </nav>
+    <script src="bigSlide.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.menu-link').bigSlide();
+        });
+    </script>
+    <div class="row">
+        <div class="column">
+            <div class="wrap push">
+                <script src="menucolorshit.js"></script>
+            </div>
+            <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
+        </div>
+        <div class="column">
+            <script src="logoshit.js"></script>
+        </div>
+    </div> 
+<script>
+        console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
+        if ($.urlParam('darkmode') == "on") {
+            document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Hey goofball! Unfortunately, the site you are trying to access either doesn\'t exist or has been deleted. Instead, why not go and check out our games <a href="index.html?darkmode=on">here</a>?</strong></p>');
+            document.write('<p style="text-align:center;"><img src="Photos/siteart.png" style="width:35%"></p>');
+            document.write('</br>');
+            document.write('</br>');
+            document.write('<p style="max-width:40%;"><p style="text-align:center; color:white;"><strong>Art by: Sans is Justified and Punny#2351</strong></p></p>');
+        } else {
+            document.write('<p style="text-align:center; font-size:120%;"><strong>Hey goofball! Unfortunately, the site you are trying to access either doesn\'t exist or has been deleted. Instead, why not go and check out our games <a href="index.html">here</a>?</strong></p>');
+            document.write('<p style="text-align:center;"><img src="Photos/siteart.png" style="width:35%"></p>');
+            document.write('</br>');
+            document.write('</br>');
+            document.write('<p style="max-width:40%;"><p style="text-align:center;"><strong>Art by: Sans is Justified and Punny#2351</strong></p></p>');
+        }
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="Photos/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="DustyZero">
-    <meta property="og:url" content="https://dustyzero.xyz">
+    <meta property="og:url" content="https://dustyzero.xyz/faq.html">
     <meta property="og:title" content="FAQ">
     <meta property="og:description" content="An indie game studio">
     <meta property="og:type" content="website">
@@ -55,7 +55,7 @@
         font-size: 15px;
         }
 
-        .active, .collapsible:hover {
+        .active2, .collapsible:hover {
         background-color: #555;
         }
 
@@ -74,16 +74,13 @@
 </head>
 
 <body style="background-color:rgb(255, 255, 255);">
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
   <nav id="menu" class="panel" role="navigation">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="about.html">About</a></li>
-        </br>
-        <a>Version: 2.0 patch 3</a>
+        <script src="menu-root.js"></script>
     </ul>
 </nav>
-<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<script src="colorshit.js"></script>
 <script src="bigSlide.js"></script>
 <script>
     $(document).ready(function() {
@@ -91,18 +88,24 @@
     });
 </script>
 <div class="row">
-    <div class="column">
+  <div class="column">
       <div class="wrap push">
-        <a href="#menu" class="menu-link"><img src="Photos/hamburger.png" style="width:10%"></a>
+          <script src="menucolorshit.js"></script>
       </div>
-    </div>
-    <div class="column">
-        <p style="text-align:center;"><img src="Photos/dustyzerotxt.png" style="width:100%"></p>
-    </div>
-    </div> 
-    </div>
+      <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
+  </div>
+  <div class="column">
+      <script src="logoshit.js"></script>
+  </div>
 </div> 
-<p style="text-align:center; font-size:160%;"><strong>FAQ</strong></p>
+<script>
+  console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
+  if ($.urlParam('darkmode') == "on") {
+              document.write('<p style="text-align:center; font-size:160%; color:white;"><strong>FAQ</strong></p>');
+          } else {
+              document.write('<p style="text-align:center; font-size:160%;"><strong>FAQ</strong></p>');
+  }
+</script>
 <button type="button" class="collapsible">How do I download Python?</button>
 <div class="content">
   <p>Go to <a href="https://python.org/">python.org</a> and download your preferred version. <strong>NOTE: SOME FEATURES MAY NOT WORK WITH OLDER VERSIONS OF PYTHON!</strong></p>
@@ -129,7 +132,7 @@
     
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+        this.classList.toggle("active2");
         var content = this.nextElementSibling;
         if (content.style.display === "block") {
           content.style.display = "none";
