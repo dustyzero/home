@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DustyZero - Page Not Found</title>
-    <link rel="icon" type="image/png" href="/Photos/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+                                $.urlParam = function (name) {
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                                .exec(window.location.search);
+
+                return (results !== null) ? results[1] || 0 : false;
+            }
+    if (!$.urlParam('dialogue') == "") {
+        document.write("<title>DustyZero - Duck Found</title>");
+    } else {
+        document.write("<title>DustyZero - Page Not Found</title>");
+    }
+    </script>
+    <link rel="icon" type="image/png" href="https://dustyzero.xyz/Photos/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="DustyZero">
     <meta property="og:url" content="https://dustyzero.xyz/404.html">
     <meta property="og:title" content="Page Not Found">
     <meta property="og:description" content="An indie game studio">
     <meta property="og:type" content="website">
-    <meta name="og:image" itemprop="image" content="legacy/images/dusty0.png">
-    <link rel="stylesheet" href="css/simple.css">
+    <meta name="og:image" itemprop="image" content="https://dustyzero.xyz/legacy/images/dusty0.png">
+    <link rel="stylesheet" href="https://dustyzero.xyz/css/simple.css">
     <style>
         body {
         margin: 0;
@@ -51,7 +64,6 @@
 </head>
 
 <body style="background-color:rgb(255, 255, 255);">
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="https://dustyzero.xyz/colorshit.js"></script>
     <nav id="menu" class="panel" role="navigation">
         <ul>
@@ -67,28 +79,472 @@
     <div class="row">
         <div class="column">
             <div class="wrap push">
-                <script src="https://dustyzero.xyz/menucolorshit.js"></script>
+                <script>/*https://dustyzero.xyz/menucolorshit.js*/</script>
+                <script>
+                /*$.urlParam = function (name) {
+                    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                                      .exec(window.location.search);
+                
+                    return (results !== null) ? results[1] || 0 : false;
+                }
+                var fileName = location.pathname.split("/").slice(-1);
+                console.log("Logged for MenuBtn; Dark mode " + $.urlParam('darkmode') + "!"); 
+                if ($.urlParam('darkmode') == "on") {
+                    document.write('<a href="#menu" class="menu-link"><img src="https://dustyzero.xyz/Photos/hamburger-light.png" style="width:10%"></a>');
+                } else {
+                    document.write('<a href="#menu" class="menu-link"><img src="https://dustyzero.xyz/Photos/hamburger.png" style="width:10%"></a>');
+                }*/
+                </script>
             </div>
-            <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
         </div>
         <div class="column">
-            <script src="https://dustyzero.xyz/logoshit.js"></script>
-        </div>
-    </div> 
+            <script>
+                        $.urlParam = function (name) {
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                                .exec(window.location.search);
+
+                return (results !== null) ? results[1] || 0 : false;
+            }
+            var fileName = location.pathname.split("/").slice(-1);
+            console.log("Logged for Logo; Dark mode " + $.urlParam('darkmode') + "!"); 
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/dustyzerotxt-light.png" style="width:100%"></p>');
+            } else {
+                document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/dustyzerotxt.png" style="width:100%"></p>');
+            }</script>
+                    </div>
+                </div> 
 <script>
         console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
-        if ($.urlParam('darkmode') == "on") {
-            document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Hey goofball! Unfortunately, the site you are trying to access either doesn\'t exist or has been deleted. Instead, why not go and check out our games <a href="about.html?darkmode=on">here</a>?</strong></p>');
-            document.write('<p style="text-align:center;"><img src="Photos/siteart.png" style="width:35%"></p>');
-            document.write('</br>');
-            document.write('</br>');
-            document.write('<p style="max-width:40%;"><p style="text-align:center; color:white;"><strong>Art by: Sans is Justified and Punny#2351</strong></p></p>');
+        var randomnumber = Math.floor(Math.random() * 50) + 1;
+        console.log("Logged for Page Ver.; RDD " + (randomnumber == 5));
+        if (randomnumber == 5 && $.urlParam('dialogue') == "") {
+            if ($.urlParam('darkmode') == "on") {
+                window.location.href = fileName + "?darkmode=on" + "&dialogue=1";
+            } else if ($.urlParam('darkmode') == "off") {
+                window.location.href = fileName + "?darkmode=off" + "&dialogue=1";
+            } else {
+                window.location.href = fileName + "?darkmode=off" + "&dialogue=1";
+            }
+        } else if ($.urlParam('dialogue') == "1") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Talk to the rubber ducky, he will help you with debugging your code.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Talk to the rubber ducky, he will help you with debugging your code.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=2"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "2") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Come on, speak to him.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Come on, speak to him.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=3"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "3") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Tell him what you want to do with your code.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Tell him what you want to do with your code.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=4"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "4") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>The solution will come to you.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>The solution will come to you.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=5"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "5") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Do you not trust the rubber ducky?</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Do you not trust the rubber ducky?</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=6"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "6") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>You should.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>You should.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=7"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "7") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>I do.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>I do.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=8"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "8") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>The rubber ducky is trustworthy.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>The rubber ducky is trustworthy.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=9"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "9") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Tell him all your problems.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Tell him all your problems.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=10"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "10") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He will listen.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He will listen.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=11"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "11") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He cares about you.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He cares about you.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=12"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "12") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He will assist.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He will assist.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=13"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "13") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Trust him.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Trust him.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=14"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "14") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He has a wrench and a tophat.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He has a wrench and a tophat.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=15"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "15") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>You\'ve gotta trust him, he has a degree in quacking code.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>You\'ve gotta trust him, he has a degree in quacking code.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=16"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "16") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He will help you a lot.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He will help you a lot.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=17"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "17") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Fun duck fact #1: Duck\'s feet can\'t feel cold.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Fun duck fact #1: Duck\'s feet can\'t feel cold.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=18"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "18") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Yep, that\'s real. Trust me, I searched it up on DuckDuckGo.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Yep, that\'s real. Trust me, I searched it up on DuckDuckGo.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=19"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "19") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Can you believe that it\'s his favourite search engine?</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Can you believe that it\'s his favourite search engine?</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=20"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "20") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Fun duck fact #2: Ducks have regional accents.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Fun duck fact #2: Ducks have regional accents.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=21"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "21") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Not even I knew that!</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Not even I knew that!</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=22"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "22") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Fun duck fact #3: Ducks have better vision than you do.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Fun duck fact #3: Ducks have better vision than you do.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=23"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "23") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Mhm! That\'s right!</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Mhm! That\'s right!</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=24"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "24") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>They are always watching.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>They are always watching.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=25"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "25") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Ever seen a little duckling? They\'re so fluffy! </strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Ever seen a little duckling? They\'re so fluffy! </strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=26"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "26") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Going back to this very fancy duck, did you know his file name is fancyduck.png?</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Going back to this very fancy duck, did you know his file name is fancyduck.png?</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=27"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "27") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>His file name doesn\'t lie, look at that top hat!</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>His file name doesn\'t lie, look at that top hat!</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=28"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "28") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Did you know he wears caps? Only on weekends however.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Did you know he wears caps? Only on weekends however.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=29"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "29") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He\'s a plumber on weekends...</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He\'s a plumber on weekends...</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=30"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "30") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He earns a lot of money.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He earns a lot of money.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=31"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "31") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He\'s good at providing for his family!</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He\'s good at providing for his family!</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=32"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "32") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He loves his family.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He loves his family.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=33"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "33") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Have you ever met them? His wife and 4 kids?</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Have you ever met them? His wife and 4 kids?</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=34"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "34") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>No? </strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>No? </strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=35"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "35") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>You should! They\'re lovely people!</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>You should! They\'re lovely people!</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=36"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "36") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Or...Ducks.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Or...Ducks.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=37"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "37") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He used to be a game developer you know.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He used to be a game developer you know.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=38"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "38") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>He used to work for a company called DuckyZero back in 1991.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>He used to work for a company called DuckyZero back in 1991.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=39"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "39") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Unfortunately, he left the company in late 1996 due to "Personal reasons"</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Unfortunately, he left the company in late 1996 due to "Personal reasons"</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=40"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "40") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>At least, that\'s what it says on his 2 week notice...</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>At least, that\'s what it says on his 2 week notice...</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=41"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "41") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>No idea if it\'s actually true. Between you and me, I believe he\'s quite the shady fellow.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>No idea if it\'s actually true. Between you and me, I believe he\'s quite the shady fellow.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=42"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "42") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>I don\'t really trust him...</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>I don\'t really trust him...</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=43"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "43") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Oh no, I think he can hear us!</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Oh no, I think he can hear us!</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=44"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "44") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Fun duck fact #4: Male ducks are called drakes.</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Fun duck fact #4: Male ducks are called drakes.</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue=45"><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
+        } else if ($.urlParam('dialogue') == "45") {
+            document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/fancyduck.png" style="width:20%"></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Come back later for more fun duck facts!</strong></p>');
+            }
+            if ($.urlParam('darkmode') == "off") {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Come back later for more fun duck facts!</strong></p>');
+            }
+            document.write('<p style="text-align:center;"><a href="' + fileName + '?darkmode=' + $.urlParam('darkmode') + '&dialogue="><img src="https://dustyzero.xyz/Photos/nextbtn.png" style="width:10%"></a></p>');
         } else {
-            document.write('<p style="text-align:center; font-size:120%;"><strong>Hey goofball! Unfortunately, the site you are trying to access either doesn\'t exist or has been deleted. Instead, why not go and check out our games <a href="about.html">here</a>?</strong></p>');
-            document.write('<p style="text-align:center;"><img src="Photos/siteart.png" style="width:35%"></p>');
-            document.write('</br>');
-            document.write('</br>');
-            document.write('<p style="max-width:40%;"><p style="text-align:center;"><strong>Art by: Sans is Justified and Punny#2351</strong></p></p>');
+            if ($.urlParam('darkmode') == "on") {
+                document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Hey goofball! Unfortunately, the site you are trying to access either doesn\'t exist or has been deleted. Instead, why not go and check out our games <a href="https://dustyzero.xyz/about.html?darkmode=on">here</a>?</strong></p>');
+                document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/siteart.png" style="width:35%"></p>');
+                document.write('</br>');
+                document.write('</br>');
+                document.write('<p style="max-width:40%;"><p style="text-align:center; color:white;"><strong>Art by: sansisjustifiedandpunny (Discord)</strong></p></p>');
+            } else {
+                document.write('<p style="text-align:center; font-size:120%;"><strong>Hey goofball! Unfortunately, the site you are trying to access either doesn\'t exist or has been deleted. Instead, why not go and check out our games <a href="https://dustyzero.xyz/about.html">here</a>?</strong></p>');
+                document.write('<p style="text-align:center;"><img src="https://dustyzero.xyz/Photos/siteart.png" style="width:35%"></p>');
+                document.write('</br>');
+                document.write('</br>');
+                document.write('<p style="max-width:40%;"><p style="text-align:center;"><strong>Art by: sansisjustifiedandpunny (Discord)</strong></p></p>');
+            }
         }
 </script>
 </body>
