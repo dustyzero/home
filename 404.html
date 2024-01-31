@@ -117,7 +117,8 @@
 <script>
         console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
         var randomnumber = Math.floor(Math.random() * 50) + 1;
-        console.log("Logged for Page Ver.; RDD " + (randomnumber == 5));
+        var gennednum = randomnumber;
+        console.log("Logged for Page Ver.; RDD " + (gennednum == 5));
         const textlines = [
             "Talk to the rubber ducky, he will help you with debugging your code. Come on, speak to him.",
             "Tell him what you want him to do with your code. The solution will come to you.",
@@ -159,7 +160,7 @@
             "Fun duck fact #4: Male ducks are called drakes.",
             "Come back later for more fun duck facts!"
         ];
-        if (randomnumber == 5 && $.urlParam('dialogue') == "") {
+        if (gennednum == 5 && $.urlParam('dialogue') == "") {
             if ($.urlParam('darkmode') == "on") {
                 window.location.href = fileName + "?darkmode=on" + "&dialogue=1";
             } else if ($.urlParam('darkmode') == "off") {
