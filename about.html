@@ -4,39 +4,44 @@
     <title>DustyZero - About</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="DustyZero">
+    <meta property="og:url" content="https://dustyzero.xyz/about.html">
+    <meta property="og:title" content="About">
+    <meta property="og:description" content="An indie game studio">
+    <meta property="og:type" content="website">
+    <meta name="og:image" itemprop="image" content="legacy/images/dusty0.png">
+    <link rel="stylesheet" href="css/simple.css">
     <style>
     body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     }
 
-    .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    }
-
-    .navbar a {
+     /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
     float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    width: 33.33%;
+    padding: 5px;
     }
 
-    .navbar a:hover {
-    background: #f1f1f1;
-    color: black;
+    /* Clear floats after image containers */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }  /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
     }
 
-    .navbar a.active {
-    background-color: #8e00fb;
-    color: white;
-    }
+    /* Clear floats after image containers */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    } 
 
     .main {
     padding: 16px;
@@ -44,28 +49,120 @@
     }
     </style>
 </head>
-<body style="background-color:rgba(109, 9, 212, 0.320);">
-
-<h2>About</h2>
+<body style="background-color:rgb(255, 255, 255);">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="colorshit.js"></script>
+    <nav id="menu" class="panel" role="navigation">
+        <ul>
+            <script src="menu-root.js"></script>
+        </ul>
+    </nav>
+    
+    <script>// <p><img src="Photos/hamburger.png" width="50" height="50"></p></script>
+    
+    <script src="bigSlide.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.menu-link').bigSlide();
+        });
+    </script>
+    </script>
+    <div class="row">
+        <div class="column">
+            <div class="wrap push">
+                <script src="menucolorshit.js"></script>
+            </div>
+            <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
+        </div>
+        <div class="column">
+            <script src="logoshit.js"></script>
+        </div>
+    </div> 
+<script>
+        console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
+        if ($.urlParam('darkmode') == "on") {
+            document.write('<p style="text-align:center; font-size:150%; color:white;"><strong>DustyZero is a small indie game studio created by ThatDevIzzie.</strong></p>');
+            document.write('</br></br>');
+            document.write('<p style="text-align:center; font-size:120%; color:white;"><strong>Meet our team!</strong></p>');
+            document.write('</br></br>');
+            document.write('</br></br>');
+            document.write('<p style="text-align:center; color:white;"><strong>• ThatDevIzzie - Founder of DustyZero - Game developer </strong></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center; color:white;"><strong>• Butter/HoldMyLimez - Co-founder of DustyZero - Game developer/Website developer</strong></p>');
+            document.write('</br></br>');
+            document.write('<header><p style="text-align:center; font-size:120%; color:white;"><strong>Our Titles</strong></p></header>');
+            document.write('</br>');
+            document.write('<header><p style="text-align:center; font-size:105%; color:white;"><strong>Press Enter to Begin</strong></p></header>');
+            document.write('</br>');
+            document.write('</br>');
+            document.write('<p style="text-align:center;"><iframe frameborder="0" src="https://itch.io/embed/1159879?bg_color=000000&amp;fg_color=ffffff" width="552" height="167"><a href="https://dustyzero.itch.io/press-enter-to-begin">Press enter to begin by DustyZero</a></iframe></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center; color:white;"><strong>This game is made by the spectacular minds at DustyZero and is made in Python.</br>');
+            document.write('Press enter to begin started development on August 12th 2021 and was released on August 16th 2021.</br>');
+            document.write('The team behind this title are;</br>');
+            document.write('</br>');
+            document.write('• ThatDevIzzie - Programmer</br>');
+            document.write('• RandomlyCoolGuy - Assistant programmer</br>');
+            document.write('• Devieus - Assistant programmer</br>');
+            document.write('• Sally potatoe - Promo Artist</br>');
+            document.write('• Cubentum - Albanian translator</br>');
+            document.write('• Butter/HoldMyLimez - Norwegian translator</br>');
+            document.write('• Shadow Side - PT-PT translator</br>');
+            document.write('• Blop - German translator</strong></p>');
+            document.write('</br></br>');
+            document.write('<header><p style="text-align:center; font-size:105%; color:white;"><strong>Coded Clash</strong></p></header>');
+            document.write('</br>');
+            document.write('<p style="text-align:center;"><iframe frameborder="0" src="https://itch.io/embed/1230739?bg_color=2e9833&amp;fg_color=ffffff" width="552" height="167"><a href="https://dustyzero.itch.io/press-enter-to-begin">Press enter to begin by DustyZero</a></iframe></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center; color:white;"><strong>This game is made by the spectacular minds at DustyZero and is made in the Scratch game engine.</br>');
+            document.write('Coded Clash started development on September 26th 2021 and was released on October 12th 2021.</br>');
+            document.write('The team behind this title are;</br>');
+            document.write('</br>');
+            document.write('• ThatDevIzzie - Director</br>');
+            document.write('• Eggu - Programmer & Artist</br>');
+            document.write('• MonkeyHat549 - Musician</strong></p>');
+        } else {
+            document.write('<p style="text-align:center; font-size:150%;"><strong>DustyZero is a small indie game studio created by ThatDevIzzie.</strong></p>');
+            document.write('</br></br>');
+            document.write('<p style="text-align:center; font-size:120%;"><strong>Meet our team!</strong></p>');
+            document.write('</br></br>');
+            document.write('</br></br>');
+            document.write('<p style="text-align:center;"><strong>• ThatDevIzzie - Founder of DustyZero - Game developer </strong></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center;"><strong>• Butter/HoldMyLimez - Co-founder of DustyZero - Game developer/Website developer</strong></p>');
+            document.write('</br></br>');
+            document.write('<header><p style="text-align:center; font-size:120%;"><strong>Our Titles</strong></p></header>');
+            document.write('</br>');
+            document.write('<header><p style="text-align:center; font-size:105%;"><strong>Press Enter to Begin</strong></p></header>');
+            document.write('</br>');
+            document.write('</br>');
+            document.write('<p style="text-align:center;"><iframe frameborder="0" src="https://itch.io/embed/1159879?bg_color=000000&amp;fg_color=ffffff" width="552" height="167"><a href="https://dustyzero.itch.io/press-enter-to-begin">Press enter to begin by DustyZero</a></iframe></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center; "><strong>This game is made by the spectacular minds at DustyZero and is made in Python.</br>');
+            document.write('Press enter to begin started development on August 12th 2021 and was released on August 16th 2021.</br>');
+            document.write('The team behind this title are;</br>');
+            document.write('</br>');
+            document.write('• ThatDevIzzie - Programmer</br>');
+            document.write('• RandomlyCoolGuy - Assistant programmer</br>');
+            document.write('• Devieus - Assistant programmer</br>');
+            document.write('• Sally potatoe - Promo Artist</br>');
+            document.write('• Cubentum - Albanian translator</br>');
+            document.write('• Butter/HoldMyLimez - Norwegian translator</br>');
+            document.write('• Shadow Side - PT-PT translator</br>');
+            document.write('• Blop - German translator</strong></p>');
+            document.write('</br></br>');
+            document.write('<header><p style="text-align:center; font-size:105%;"><strong>Coded Clash</strong></p></header>');
+            document.write('</br>');
+            document.write('<p style="text-align:center;"><iframe frameborder="0" src="https://itch.io/embed/1230739?bg_color=2e9833&amp;fg_color=ffffff" width="552" height="167"><a href="https://dustyzero.itch.io/press-enter-to-begin">Press enter to begin by DustyZero</a></iframe></p>');
+            document.write('</br>');
+            document.write('<p style="text-align:center;"><strong>This game is made by the spectacular minds at DustyZero and is made in the Scratch game engine.</br>');
+            document.write('Coded Clash started development on September 26th 2021 and was released on October 12th 2021.</br>');
+            document.write('The team behind this title are;</br>');
+            document.write('</br>');
+            document.write('• ThatDevIzzie - Director</br>');
+            document.write('• Eggu - Programmer & Artist</br>');
+            document.write('• MonkeyHat549 - Musician</strong></p>');
+        }
+</script>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-<p style="text-align:center; font-size:200%;"><strong>We're a small indie game studio called DustyZero. We don't just make games, we craft experiences.</strong></p>
-<p style="text-align:center; font-size:70%;"><strong>Any pages on this site are © DustyZero 2022-<script>document.write(new Date().getFullYear());</script>. All rights reserved.</strong></p>
-</br>
-</br>
-</br>
-</br>
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="games.html">Games</a>
-    <a href="faq.html">FAQ</a>
-    <a href="socials.html">Socials</a>
-</div>
 </body>
