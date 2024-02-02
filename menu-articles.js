@@ -14,6 +14,8 @@ if ($.urlParam('darkmode') == "on") {
     document.write('</br>');
     document.write('<li><a href="' + fileName + '?darkmode=off">Switch to Light Mode</a></li>');
     document.write('<a>Version: <script src="../../versioning.js"></script></a>');
+    document.write('</br>');
+    document.write('<a><script src="../../copyright.js"></script></a>');
 } else {
     document.write('<li><a href="../../index.html">Home</a></li>');
     document.write('<li><a href="../../faq.html">FAQ</a></li>');
@@ -22,4 +24,6 @@ if ($.urlParam('darkmode') == "on") {
     document.write('</br>');
     document.write('<li><a href="' + fileName + '?darkmode=on">Switch to Dark Mode</a></li>');
     document.write('<a>Version: <script src="../../versioning.js"></script></a>');
+    document.write('</br>');
+    document.write('<a><script src="../../copyright.js"></script></a>');
 }
