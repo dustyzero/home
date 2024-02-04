@@ -1,0 +1,5 @@
+Hello everyone! Recently, there has been some exciting news about DustyZero - such as the announcement of Bounce Boy - that I'm sure 
+we're all excited about, but today its a bit different. 
+Version 2.0 of the DustyZero website has been released! 
+It introduces the very feature used to view this article; news! 
+It also significantly improves the website visually! It uses jQuery and bigSlide to create a hamburger menu, and that hamburger menu can navigate pages and displays the site version.

@@ -2,41 +2,46 @@
 <html>
 <head>
     <title>DustyZero - Home</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="Photos/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="DustyZero">
+    <meta property="og:url" content="https://dustyzero.xyz">
+    <meta property="og:title" content="Home">
+    <meta property="og:description" content="An indie game studio">
+    <meta property="og:type" content="website">
+    <meta name="og:image" itemprop="image" content="legacy/images/dusty0.png">
+    <link rel="stylesheet" href="css/simple.css">
     <style>
     body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     }
 
-    .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    }
-
-    .navbar a {
+     /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
     float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    width: 33.33%;
+    padding: 5px;
     }
 
-    .navbar a:hover {
-    background: #f1f1f1;
-    color: black;
+    /* Clear floats after image containers */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }  /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
     }
 
-    .navbar a.active {
-    background-color: #8e00fb;
-    color: white;
-    }
+    /* Clear floats after image containers */
+    .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    } 
 
     .main {
     padding: 16px;
@@ -44,24 +49,46 @@
     }
     </style>
 </head>
-<body style="background-color:rgba(109, 9, 212, 0.320);">
-</br>    
-</br>
-</br>
-<h2 style="text-align:center;">DustyZero</h2>
-</br>
-<p style="text-align:center;">Welcome to the official DustyZero website!</p>
-<p style="text-align:center;">Go ahead, check out some of our pages!</p>
-</br>
-</br>
-</br>
-</br>
-<div class="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="games.html">Games</a>
-    <a href="faq.html">FAQ</a>
-    <a href="socials.html">Socials</a>
+<body style="background-color:rgb(255, 255, 255);">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="colorshit.js"></script>
+    <script src="bigSlide.js"></script>
+    <nav id="menu" class="panel" role="navigation">
+        <ul>
+            <script src="menu-root.js"></script>
+        </ul>
+    </nav>
+    <script>
+        $(document).ready(function() {
+            $('.menu-link').bigSlide();
+        });
+    </script>
+    <script>// <p><img src="Photos/hamburger.png" width="50" height="50"></p></script>
+    <div class="row">
+        <div class="column">
+            <div class="wrap push">
+                <script src="menucolorshit.js"></script>
+            </div>
+            <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
+        </div>
+        <div class="column">
+            <script src="logoshit.js"></script>
+        </div>
+    </div> 
+    <script>
+console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
+if ($.urlParam('darkmode') == "on") {
+    document.write('<p style="text-align:center; color:white;">Welcome to the official DustyZero website!</p>');
+    document.write('<p style="text-align:center; color:white;">You are on the home page. Here you can find the latest news about DustyZero!</p>');
+    document.write('<p style="text-align:center; color:white;"><a href="news/topics/website/website2.2release/article.html?darkmode=on"><img src="Photos/2.2.png" style="width:32%"></a></p>');
+} else {
+    document.write('<p style="text-align:center;">Welcome to the official DustyZero website!</p>');
+    document.write('<p style="text-align:center;">You are on the home page. Here you can find the latest news about DustyZero!</p>');
+    document.write('<p style="text-align:center;"><a href="news/topics/website/website2.2release/article.html"><img src="Photos/2.2.png" style="width:32%"></a></p>');
+}
+</script>
+
 </div>
+</div> 
 </body>
 </html>

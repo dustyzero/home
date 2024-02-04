@@ -1,0 +1,7 @@
+Hello everyone! There have been more changes to our website!
+Welcome to 2.1!
+Very close to the release of 2.0, I know.
+Since there is now more than 1 article, we have added topic and article navigators so you can view older articles.
+We have also added a dark mode, incase your retinas burned at the sight of 2.0!
+Also, the weird shadow behind the hamburger menu button that would appear when opening the menu in the faq has been fixed.
+We've also added the date on which an article was published to the bottom of the article.

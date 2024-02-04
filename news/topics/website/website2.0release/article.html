@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website 2.0 has been launched!! - Butter</title>
+    <link rel="icon" type="image/png" href="../../../../Photos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="DustyZero">
+    <meta property="og:url" content="https://dustyzero.xyz/news/topics/website/website2.0release/article.html">
+    <meta property="og:title" content="Website 2.0 has been launched!! - Butter">
+    <meta property="og:description" content="An indie game studio">
+    <meta property="og:type" content="website">
+    <meta name="og:image" itemprop="image" content="../../../../legacy/images/dusty0.png">
+    <link rel="stylesheet" href="../../../../css/simple.css">
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }  /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        } 
+
+        .main {
+        padding: 16px;
+        margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="../../../../colorshit.js"></script>
+  <nav id="menu" class="panel" role="navigation">
+    <ul>
+      <script src="../../menu-inarticle.js"></script>
+    </ul>
+</nav>
+
+<script src="../../../../bigSlide.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.menu-link').bigSlide();
+    });
+</script>
+<div class="row">
+  <div class="column">
+      <div class="wrap push">
+          <script src="../../menucolorshit-inarticle.js"></script>
+      </div>
+      <script>// <p style="text-align:left;"><img src="Photos/hamburger.png" style="width:10%"></p></script>
+  </div>
+  <div class="column">
+      <script src="../../logoshit-inarticle.js"></script>
+  </div>
+</div> 
+<script>
+  console.log("Logged for Text; Dark mode " + $.urlParam('darkmode') + "!"); 
+  if ($.urlParam('darkmode') == "on") {
+              document.write('<p style="text-align:center; font-size:160%; color:white;"><strong>Website 2.0 has been launched!!</strong></p>');
+              document.write('<p style="text-align:center; font-size:160%; color:white;"><strong>An article by <a style="text-align:center; font-size:160%; color:rgb(36, 191, 218);">Butter</a></strong></p>');
+              document.write('</br>');
+              document.write('<p style="max-width:40%;"><p style="text-align:center; color:white;">Hello everyone! Recently, there have been some exciting news about DustyZero - such as the announcement of Bounce Boy - that I\'m</br>');
+              document.write('  sure we\'re all excited about, but today its a bit different. Version 2.0 of the DustyZero website has been released! It introduces the very feature used</br>');
+              document.write('  to view this article: news!</br>');
+              document.write('  It also significantly improves the website visually!</br>');
+              document.write('  It uses jQuery and bigSlide to create a hamburger menu, and that hamburger menu can navigate pages and displays the site version.</p></p>');
+              document.write('<p style="text-align:center; font-size:65%; color:white;">18/01/2023</p>');
+          } else {
+              document.write('<p style="text-align:center; font-size:160%;"><strong>Website 2.0 has been launched!!</strong></p>');
+              document.write('<p style="text-align:center; font-size:160%;"><strong>An article by <a style="text-align:center; font-size:160%; color:rgb(36, 191, 218);">Butter</a></strong></p>');
+              document.write('</br>');
+              document.write('<p style="max-width:40%;"><p style="text-align:center;">Hello everyone! Recently, there have been some exciting news about DustyZero - such as the announcement of Bounce Boy - that I\'m</br>');
+              document.write('  sure we\'re all excited about, but today its a bit different. Version 2.0 of the DustyZero website has been released! It introduces the very feature used</br>');
+              document.write('  to view this article: news!</br>');
+              document.write('  It also significantly improves the website visually!</br>');
+              document.write('  It uses jQuery and bigSlide to create a hamburger menu, and that hamburger menu can navigate pages and displays the site version.</p></p>');
+              document.write('<p style="text-align:center; font-size:65%;">18/01/2023</p>');
+  }
+  </script>
+</body>
+</html>
